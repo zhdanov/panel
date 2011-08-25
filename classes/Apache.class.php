@@ -8,6 +8,7 @@ class Apache {
 
   private $fileVirtualhost   = 'virtualhost.tpl';
   private $helpForCreateHost = 'apachehost     Создание виртуального хоста в apache';
+  private $errorForCreateHost = 'Введите имя для виртуального хоста';
 
   public function __construct() {
     $settings       = new Settings();
@@ -43,5 +44,13 @@ class Apache {
     $this->createSitesAvailable($hostname);
     $this->createSitesEnabled($hostname);
     $this->restart();
+  }
+
+  public function getHelpForCreateHost() {
+    return $this->helpForCreateHost;
+  }
+
+  public function getErrorForCreateHost() {
+    return $this->errorForCreateHost;
   }
 }

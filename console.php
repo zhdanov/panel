@@ -23,7 +23,7 @@ switch($argv[1]) {
       // хост для apache
       case 'apachehost':
         if($argv[3] == '') {
-          echo $apache->getHelpForCreateHost();
+          echo $apache->getErrorForCreateHost()."\n";
           break;
         }
         $apache->createHost($argv[3]);
@@ -32,7 +32,7 @@ switch($argv[1]) {
       // www директорию
       case 'wwwdir':
         if($argv[3] == '') {
-          echo $wwwdir->getHelpForCreateDir();
+          echo $wwwdir->getErrorForCreateDir()."\n";
           break;
         }
         $wwwdir->createDir($argv[3]);
@@ -41,7 +41,7 @@ switch($argv[1]) {
       // хост в /etc/hosts
       case 'etchost':
         if($argv[3] == '') {
-          echo $etchost->getHelpForCreateHost();
+          echo $etchost->getErrorForCreateHost()."\n";
           break;
         }
         $etchost->createHost($argv[3]);
@@ -50,7 +50,7 @@ switch($argv[1]) {
       // базу и пользователя в mysql
       case 'mysqldbuser':
         if($argv[3] == '') {
-          echo $mysql->getHelpForCreateDbuser();
+          echo $mysql->getErrorForCreateDbuser()."\n";
           break;
         }
         $mysql->createDbuser($argv[3]);
@@ -59,19 +59,19 @@ switch($argv[1]) {
       // пространство для проекта
       case 'set':
         if($argv[3] == '') {
-          echo $set->getHelpForCreate();
+          echo $set->getErrorForCreate()."\n";
           break;
         }
         $set->create($argv[3]);
         break;
 
       default:
-        echo $default->getForCreate();
+        echo $default->getForCreate()."\n";
       break;
     }
     break;
 
   default:
-    echo $default->getForAll();
+    echo $default->getForAll()."\n";
   break;
 }
