@@ -262,6 +262,11 @@ class Smarty extends Smarty_Internal_Data {
         if (isset($_SERVER['SCRIPT_NAME'])) {
             $this->assignGlobal('SCRIPT_NAME', $_SERVER['SCRIPT_NAME']);
         }
+        // переопределяем свойства (zhdanov)
+        $this->setTemplateDir(dirname(__FILE__).'/smarty/templates');
+        $this->setCompileDir(dirname(__FILE__).'/smarty/templates_c');
+        $this->setCacheDir(dirname(__FILE__).'/smarty/cache');
+        $this->setConfigDir(dirname(__FILE__).'/smarty/configs');
     }
 
     /**

@@ -8,14 +8,6 @@ require_once(dirname(__FILE__).'/classes/Mysql.class.php');
 require_once(dirname(__FILE__).'/classes/Set.class.php');
 require_once(dirname(__FILE__).'/classes/DefaultHelp.class.php');
 
-// Настройка smarty
-require_once(dirname(__FILE__).'/lib/Smarty/Smarty.class.php');
-$smarty = new Smarty();
-$smarty->setTemplateDir(dirname(__FILE__).'/smarty/templates');
-$smarty->setCompileDir(dirname(__FILE__).'/smarty/templates_c');
-$smarty->setCacheDir(dirname(__FILE__).'/smarty/cache');
-$smarty->setConfigDir(dirname(__FILE__).'/smarty/configs');
-
 // Создание объектов
 $apache   = new Apache();
 $wwwdir   = new Wwwdir();
