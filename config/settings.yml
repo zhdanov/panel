@@ -1,4 +1,9 @@
+email: anonymous@www.com
+wwwdir: /var/www/
 mysql:
   host: localhost
   user: root
   password: ''
+apache:
+  sites_available: '/etc/apache2/sites-available/'
+  sites_enabled: '/etc/apache2/sites-enabled/'
