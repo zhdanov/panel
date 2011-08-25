@@ -8,7 +8,7 @@ class Apache {
 
   private $fileVirtualhost   = 'virtualhost.tpl';
   private $helpForCreateHost = 'apachehost     Создание виртуального хоста в apache';
-  private $errorForCreateHost = 'Введите имя для виртуального хоста';
+  private $errorForCreateHost = 'Укажите название виртуального хоста';
 
   public function __construct() {
     $settings       = new Settings();
