@@ -1,6 +1,5 @@
 <?php
 // Загрузка классов
-require_once(dirname(__FILE__).'/classes/Settings.class.php');
 require_once(dirname(__FILE__).'/classes/Apache.class.php');
 require_once(dirname(__FILE__).'/classes/Wwwdir.class.php');
 require_once(dirname(__FILE__).'/classes/Etchost.class.php');
