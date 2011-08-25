@@ -1,5 +1,5 @@
 <?php
-// Подгрузка классов
+// Загрузка классов
 require_once(dirname(__FILE__).'/classes/Settings.class.php');
 require_once(dirname(__FILE__).'/classes/Apache.class.php');
 require_once(dirname(__FILE__).'/classes/Wwwdir.class.php');
@@ -16,29 +16,13 @@ $smarty->setCompileDir(dirname(__FILE__).'/smarty/templates_c');
 $smarty->setCacheDir(dirname(__FILE__).'/smarty/cache');
 $smarty->setConfigDir(dirname(__FILE__).'/smarty/configs');
 
-// Получение настроек
-$settings      = new Settings();
-$settingsArray = $settings->getArray();
-
 // Создание объектов
-$apache   = new Apache($settingsArray);
-$wwwdir   = new Wwwdir($settingsArray);
+$apache   = new Apache();
+$wwwdir   = new Wwwdir();
 $etchost  = new Etchost();
-$mysql    = new Mysql($settingsArray);
-$set      = new Set(
-                  $settingsArray,
-                  $apache,
-                  $wwwdir,
-                  $etchost,
-                  $mysql
-                );
-$default  = new DefaultHelp(
-                  $settingsArray,
-                  $apache,
-                  $wwwdir,
-                  $etchost,
-                  $mysql
-                );
+$mysql    = new Mysql();
+$set      = new Set();
+$default  = new DefaultHelp();
 
 // Обработка аргументов
 switch($argv[1]) {
