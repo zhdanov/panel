@@ -10,8 +10,12 @@ class Wwwdir {
   }
 
   public function createDir($dirname) {
-    $dirpath = $this->settings['wwwdir'] . $dirname . '/web/';
-    `mkdir -p $dirpath`;
+    $dir_path = $this->settings['wwwdir'] . $dirname;
+    $dir_path_web = $dir_path . '/web/';
+    $usergroup = $this->settings['user'] . ':' . $this->settings['group'];
+
+    `mkdir -p $dir_path_web`;
+    `chown -R $usergroup $dir_path`;
   }
 
 }

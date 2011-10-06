@@ -1,4 +1,6 @@
 email: anonymous@www.com
+user: first
+group: first
 wwwdir: /var/www/
 mysql:
   host: localhost
