@@ -5,7 +5,7 @@ wwwdir: /var/www/
 mysql:
   host: localhost
   user: root
-  password: ''
+  password: ' '
 apache:
   sites_available: '/etc/apache2/sites-available/'
   sites_enabled: '/etc/apache2/sites-enabled/'
