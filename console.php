@@ -62,7 +62,11 @@ switch($argv[1]) {
           echo $set->getErrorForCreate()."\n";
           break;
         }
-        $set->create($argv[3]);
+        $wwwdir->createDir($argv[3]);
+        $apache->createHost($argv[3]);
+        $etchost->createHost($argv[3]);
+        $mysql->createDbuser($argv[3]);
+
         break;
 
       default:
