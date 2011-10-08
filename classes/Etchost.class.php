@@ -1,13 +1,8 @@
 <?php
 class Etchost {
   private $fileEtcHosts = '/etc/hosts';
-  private $helpForCreateHost = 'etchost        Добавление хоста в /etc/hosts';
   private $errorForCreateHost = 'Укажите название хоста';
   
-  public function getHelpForCreateHost() {
-    return $this->helpForCreateHost;
-  }
-
   public function getErrorForCreateHost() {
     return $this->errorForCreateHost;
   }

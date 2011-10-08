@@ -3,10 +3,15 @@ require_once(dirname(__FILE__).'/../classes/Settings.class.php');
 
 class Mysql {
   private $settings = array();
+  private $errorForCreateDbuser = 'Укажите название';
 
   public function __construct() {
     $settings       = new Settings();
     $this->settings = $settings->getArray();
+  }
+
+  public function getErrorForCreateDbuser() {
+    return $this->errorForCreateDbuser;
   }
 
   public function createDb($name) {
