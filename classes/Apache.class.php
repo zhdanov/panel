@@ -36,6 +36,7 @@ class Apache {
 
   private function restart() {
     `apache2ctl stop`;
+    sleep(1);
     `apache2ctl start`;
   }
 
